@@ -2,18 +2,178 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src='script.js' defer></script>
-	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src='script.js' defer></script>
+ <title>Lab 04</title>
+ <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+ <style>
+  body
+  {
+   font-family: 'Times New Roman', Times, serif', serif !important;
+  }
+  
+  ul 
+  {
+   margin: 0;
+   list-style-type: none;
+   padding-left: 0%;
+   font-size: 25px;
+   
+  }
+
+  .newli
+  {
+   display: block;
+   color: #164176;
+   text-align: left;
+   padding : 10px;
+   background-color: #ffffff; 
+   padding-left: 20%;
+   padding-right: 20%;
+  }
+  
+  .newli:nth-child(even) {
+     background: #ebf1f8;
+  }
+
+  .newli:hover{
+   background-color: #243953;
+   color: white;
+  }
+
+  .doneli{
+   text-align: center;
+   background-color: #164176;
+   color: rgb(255, 255, 255);
+   text-decoration: line-through;
+   padding : 10px;
+  }
+
+  .head
+  {
+   background-color: #164176;
+   text-align: center;
+   padding: 20px;
+  }
+  .content
+  {
+   background-color: #ffffff;
+   text-align: center;
+   /* display: flex; */
+   justify-content: center;
+  }
+
+  h1
+  {
+   margin: 0;
+   font-size: 60px;
+   text-align: center;
+   padding: 10px;
+   color: #ffffff;
+  }
+  
+  .add
+  {
+   margin: 0;
+   background-color: #ffffff;
+   border: none;
+     color: #164176;
+     padding: 10px 15px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 20px;
+  }
+  .add:hover
+  {
+   margin: 0;
+   background-color: #164176;;
+   border: none;
+     color: rgb(255, 255, 255);
+     padding: 10px 15px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 20px;
+  }
+
+  input
+  {
+   margin: 0;
+   background-color: #ffffff;
+   border: none;
+   color: #164176;
+     padding: 10px 24px;
+   font-size: 20px;
+   width: 40%;
+  }
+
+  .done
+  {
+   display: none;
+  }
+  
+  .newli:hover .done{
+   display: block;
+   background-color: #ff0000;
+     border-radius: 5px;
+   color: white;
+   text-align: center;
+   font-size: 15px;
+   padding: 5px;
+   float: right;
+   margin-right: 5px;
+  }
+  
+  .newli:hover .done:hover{
+   background-color: #499e6d;
+     border-radius: 5px;
+   color: white;
+   text-align: center;
+   font-size: 15px;
+   padding: 5px;
+   display: block;
+   float: right;
+  }
+
+  .delete
+  {
+   display: none;
+  }
+
+  .newli:hover .delete
+  {
+   background-color: #ff0000;
+     border-radius: 5px;
+   color: white;
+   text-align: center;
+   font-size: 15px;
+   padding: 5px;
+   display: block;
+   float: right;
+  }
+
+  .newli:hover .delete:hover
+  {
+   background-color: #8856ba;
+     border-radius: 5px;
+   color: white;
+   text-align: center;
+   font-size: 15px;
+   padding: 5px;
+   display: block;
+   float: right;
+
+  }
+  
+ </style>
 </head>
 
 <body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+ <div class="head">
+ <h1>Minimal Todo List</h1>
+ <input id = "input" type = 'text' placeholder="Write something...">
+ <span id = "ad" onclick = "Add()" class="add">ADD</span>
+ </div>
 </body>
-
 </html>
